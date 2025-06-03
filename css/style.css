@@ -1,0 +1,407 @@
+:root{
+    --Hueso: #F5F7EC;
+    --Crema: #EBD9C3;
+    --Beige: #BA9C80;
+    --cafe: #63432A;
+    --verde: #888A72;
+    --carbon: #1D1A15;
+
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Custom Navbar */
+.navbar-expand-lg{
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+}
+
+.custom-navbar {
+    margin-top: 100px;
+    position: absolute;
+     left: 50%;
+  transform: translateX(-50%);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.custom-navbar .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ddd; /* Lighter on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url("../assets/webp/banner.webp");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: left;
+}
+.txtContainer{
+    margin-left: 2rem;
+}
+
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Gallery/Portfolio Section */
+.portfolio-section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.portfolio-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+.portfolio-section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.portfolio-section h5 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.portfolio-section .btn-link {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.portfolio-section .fst-italic {
+  font-size: 1rem;
+  color: #555;
+}
+
+.portfolio-section .fw-bold {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.zoom-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+/* Contact Form Section */
+.contact-section {
+    background-color: #f0f0f0; /* Un fondo claro para esta sección */
+    padding: 0; /* Quitamos padding si queremos que la imagen y form toquen los bordes */
+    min-height: 100vh; /* Para que ocupe al menos toda la altura de la pantalla */
+    display: flex; /* Usamos flexbox para centrar contenido verticalmente */
+    align-items: center; /* Centra verticalmente el contenido del section */
+}
+
+.contact-image-container {
+    height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura disponible */
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+}
+
+.contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen cubra el contenedor sin distorsionarse */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.contact-form-wrapper {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 550px; /* Limita el ancho del formulario en pantallas grandes */
+    width: 100%; /* Asegura que ocupe el ancho disponible */
+}
+
+.contact-form-wrapper h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.contact-form-wrapper p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+.form-control:focus {
+    border-color: #999; /* Color de borde al enfocar */
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1); /* Sombra suave al enfocar */
+}
+
+.custom-submit-btn {
+    background-color: #333; /* Color oscuro como en la imagen */
+    border-color: #333;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+    background-color: #555; /* Un poco más claro al pasar el mouse */
+    border-color: #555;
+}
+
+
+/* Footer Section */
+.site-footer {
+    background-color: #222; /* Un gris muy oscuro o negro suave */
+    color: #f8f8f8; /* Color de texto claro */
+    padding: 60px 0;
+    font-size: 0.95rem;
+}
+
+.site-footer .footer-logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.site-footer .footer-logo-img {
+    height: 60px; /* Ajusta el tamaño de tu logo en el footer */
+    width: auto;
+    filter: brightness(1.5); /* Aumenta el brillo del logo si es oscuro para que se vea bien */
+}
+
+.site-footer .footer-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer .footer-logo-text:hover {
+    color: #ccc;
+}
+
+.site-footer .footer-description {
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.site-footer .footer-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.site-footer .footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Distancia de la línea de subrayado al texto */
+    width: 50px; /* Ancho de la línea de subrayado */
+    height: 2px; /* Grosor de la línea */
+    background-color: #fff; /* Color de la línea */
+}
+
+.site-footer .footer-links li,
+.site-footer .footer-contact-info li {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-contact-info li {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact-info li:hover {
+    color: #fff;
+}
+
+.site-footer .footer-contact-info i {
+    color: #fff; /* Color de los íconos de contacto */
+}
+
+/* Íconos de Redes Sociales */
+.footer-social-icons .social-icon {
+    display: inline-flex; /* Para centrar el ícono dentro del círculo */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333; /* Fondo para los íconos */
+    color: #fff;
+    border-radius: 50%; /* Círculo */
+    margin-right: 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons .social-icon:hover {
+    background-color: #555; /* Cambia de color al pasar el mouse */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Formulario de Newsletter */
+.footer-newsletter-form .form-control {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #eee;
+    border-radius: 5px 0 0 5px; /* Bordes redondeados solo a la izquierda */
+    padding: 10px 15px;
+}
+
+.footer-newsletter-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.footer-newsletter-form .form-control:focus {
+    background-color: #3a3a3a;
+    border-color: #666;
+    color: #fff;
+    box-shadow: none;
+}
+
+.footer-newsletter-form .btn {
+    background-color: #555; /* Color del botón "Enviar" */
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo a la derecha */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-newsletter-form .btn:hover {
+    background-color: #777;
+    border-color: #777;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria suave */
+}
+
+/* Ajustes responsivos para el footer */
+@media (max-width: 767.98px) { /* Móviles */
+    .site-footer .col-md-6 {
+        text-align: center !important; /* Centra el texto de todas las columnas en móvil */
+    }
+    .site-footer .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%); /* Centra el subrayado del título en móvil */
+    }
+    .site-footer .footer-social-icons {
+        text-align: center;
+    }
+    .site-footer .footer-links,
+    .site-footer .footer-contact-info,
+    .site-footer .footer-newsletter-form {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px; /* Limita el ancho de los bloques en móvil para mejor lectura */
+    }
+}
+
+/* Ajustes responsivos para esta sección */
+@media (min-width: 768px) { /* Para pantallas medianas y más grandes */
+    .contact-section .row {
+        min-height: 100vh; /* Asegura que la fila ocupe toda la altura */
+    }
+}
+
+@media (max-width: 767.98px) { /* Para pantallas pequeñas (móviles) */
+    .contact-section {
+        padding-top: 50px; /* Agrega algo de padding superior en móvil */
+        padding-bottom: 50px; /* Agrega algo de padding inferior en móvil */
+    }
+    .contact-image-container {
+        height: 300px; /* Altura fija para la imagen en móvil */
+    }
+    .contact-form-wrapper {
+        padding: 30px; /* Menos padding en móvil */
+        border-radius: 0; /* Sin bordes redondeados en móvil si ocupa todo el ancho */
+        box-shadow: none; /* Sin sombra en móvil */
+    }
+}
+
+/* Responsive Adjustments (Bootstrap handles most, but you can add more if needed) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .packages-section h2 {
+        font-size: 2rem;
+    }
+}
